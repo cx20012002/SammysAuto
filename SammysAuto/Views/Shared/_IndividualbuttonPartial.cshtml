@@ -1,0 +1,5 @@
+@model IndividualButtonPartial
+<button class="btn btn-sm @Model.ButtonType" href="@Url.Action(Model.Action)@Model.ActionParameters">
+   <span class="glyphicon @Model.Glyph"></span>
+   <span class="sr-only">@Model.Text</span>
+</button>

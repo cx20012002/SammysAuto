@@ -1,0 +1,32 @@
+@model IndividualButtonPartial
+
+<td style="width: 150px;">
+   <div class="btn-group" role="group">
+      @await Html.PartialAsync("_IndividualbuttonPartial", new IndividualButtonPartial
+      {
+         Action = "Edit",
+         ButtonType = "btn-primary",
+         Glyph = "fa fa-pencil",
+         Text = "Edit",
+         ServiceId = Model.ServiceId
+      })
+
+      @await Html.PartialAsync("_IndividualbuttonPartial", new IndividualButtonPartial
+      {
+         Action = "Details",
+         ButtonType = "btn-success",
+         Glyph = "fa fa-list",
+         Text = "Details Button",
+         ServiceId = Model.ServiceId
+      })
+
+      @await Html.PartialAsync("_IndividualbuttonPartial", new IndividualButtonPartial
+      {
+         Action = "Delete",
+         ButtonType = "btn-danger",
+         Glyph = "fa fa-trash",
+         Text = "Delete Button",
+         ServiceId = Model.ServiceId
+      })
+   </div>
+</td>
